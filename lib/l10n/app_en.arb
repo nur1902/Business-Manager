@@ -1,0 +1,40 @@
+{
+  "@@locale": "en",
+  "appName": "Business Manager",
+  "welcomeTitle": "Welcome to Business Manager",
+  "welcomeSubtitle": "Manage sales, invoices, stock and accounts easily, all in one app.",
+  "continueWithGoogle": "Continue with Google",
+  "signingIn": "Signing in...",
+  "termsNote": "By continuing, you agree to our Terms and Privacy Policy.",
+  "dashboard": "Dashboard",
+  "sales": "Sales",
+  "invoices": "Invoices",
+  "products": "Products",
+  "customers": "Customers",
+  "more": "More",
+  "welcomeUser": "Welcome, {name}",
+  "@welcomeUser": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "comingSoon": "Coming soon",
+  "theme": "Theme",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "language": "Language",
+  "languageEnglish": "English",
+  "languageBangla": "বাংলা",
+  "logout": "Logout",
+  "logoutConfirmTitle": "Log out?",
+  "logoutConfirmMessage": "You can sign in again at any time.",
+  "cancel": "Cancel",
+  "errorCancelled": "Sign-in was cancelled.",
+  "errorNoInternet": "No internet connection. Please check your connection and try again.",
+  "errorInvalidCredential": "We could not verify your sign-in. Please try again.",
+  "errorAccountDisabled": "This account has been disabled.",
+  "errorTooManyRequests": "Too many attempts. Please try again in a few minutes.",
+  "errorConfiguration": "Google Sign-In is not set up correctly. Please check the Firebase configuration.",
+  "errorUnknown": "Something went wrong. Please try again."
+}
