@@ -1,11 +1,10 @@
 import 'package:flutter/widgets.dart';
 
-import '../../l10n/app_localizations.dart';
+import 'package:buisness_manager/l10n/app_localizations.dart';
 import 'app_error.dart';
 
 extension L10nContext on BuildContext {
-  AppLocalizations? get l10n => AppLocalizations.of(this);
-}
+  AppLocalizations get l10n => AppLocalizations.of(this)!;}
 
 /// Converts an [AppErrorType] to a translated message.
 String errorMessage(AppLocalizations l10n, AppErrorType type) {

@@ -37,7 +37,7 @@ class _BusinessManagerAppState extends State<BusinessManagerApp> {
     final settings = context.watch<SettingsProvider>();
 
     return MaterialApp.router(
-      onGenerateTitle: (context) => AppLocalizations.of(context).appName,
+      onGenerateTitle: (context) => AppLocalizations.of(context)!.appName,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),

@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
     final error = await auth.signInWithGoogle();
     if (error != null) {
       messenger.showSnackBar(
-        SnackBar(content: Text(errorMessage(l10n!, error))),
+        SnackBar(content: Text(errorMessage(l10n, error))),
       );
     }
     // On success the router redirects to /home automatically.

@@ -41,6 +41,7 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
     try {
       await _service.signInWithGoogle();
+      print(user!.displayName);
       return null;
     } on AppException catch (e) {
       return e.type == AppErrorType.cancelled ? null : e.type;
@@ -48,6 +49,7 @@ class AuthProvider extends ChangeNotifier {
       _isSigningIn = false;
       notifyListeners();
     }
+
   }
 
   Future<void> signOut() => _service.signOut();
