@@ -1,7 +1,10 @@
 import 'dart:async';
 
+import 'package:buisness_manager/services/api/api_caller.dart';
+import 'package:buisness_manager/services/database/database_paths.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 
 import '../core/utils/app_error.dart';
 import '../services/firebase/auth_service.dart';
@@ -10,10 +13,16 @@ enum AuthStatus { unknown, authenticated, unauthenticated }
 
 /// Holds the login state for the whole app. The router listens to it.
 class AuthProvider extends ChangeNotifier {
+
+
   AuthProvider(this._service) {
+
+
     _user = _service.currentUser;
     _sub = _service.authStateChanges.listen(_onAuthChanged);
   }
+
+
 
   final AuthService _service;
   StreamSubscription<User?>? _sub;
@@ -42,6 +51,9 @@ class AuthProvider extends ChangeNotifier {
     try {
       await _service.signInWithGoogle();
       print(user!.displayName);
+      ApiCaller.pushRequest("${DatabasePaths.usertable}?email=${user?.email}&firebase_uid=${user?.uid}");
+
+
       return null;
     } on AppException catch (e) {
       return e.type == AppErrorType.cancelled ? null : e.type;
@@ -51,6 +63,7 @@ class AuthProvider extends ChangeNotifier {
     }
 
   }
+
 
   Future<void> signOut() => _service.signOut();
 

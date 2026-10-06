@@ -1,3 +1,4 @@
+import 'package:buisness_manager/screens/products/product_management.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,8 @@ class _HomeShellState extends State<HomeShell> {
       const _DashboardPlaceholder(),
       _PlaceholderPage(icon: Icons.point_of_sale_rounded, title: l10n.sales),
       _PlaceholderPage(icon: Icons.receipt_long_rounded, title: l10n.invoices),
-      _PlaceholderPage(icon: Icons.inventory_2_rounded, title: l10n.products),
+      //_PlaceholderPage(icon: Icons.inventory_2_rounded, title: l10n.products),
+      ProductManagement(),
       _PlaceholderPage(icon: Icons.people_alt_rounded, title: l10n.customers),
       const MoreScreen(),
     ];
@@ -137,9 +139,7 @@ class _ComingSoon extends StatelessWidget {
             style: theme.textTheme.titleLarge
                 ?.copyWith(fontWeight: FontWeight.w700)),
         const SizedBox(height: 4),
-        Text(context.l10n.comingSoon,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+
       ],
     );
   }

@@ -38,6 +38,7 @@ class MoreScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final l10n = context.l10n;
     final user = context.watch<AuthProvider>().user;
+    final uid = context.read<AuthProvider>();
     final settings = context.watch<SettingsProvider>();
     final currentLang = settings.locale?.languageCode ??
         Localizations.localeOf(context).languageCode;
@@ -70,6 +71,10 @@ class MoreScreen extends StatelessWidget {
                       Text(user?.email ?? '',
                           style: theme.textTheme.bodyMedium?.copyWith(
                               color: theme.colorScheme.onSurfaceVariant)),
+
+
+
+
                     ],
                   ),
                 ),

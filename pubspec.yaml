@@ -25,6 +25,7 @@ dependencies:
 
   # Simple key/value storage (theme + language)
   shared_preferences: ^2.5.3
+  http: ^1.6.0
 
 dev_dependencies:
   flutter_test:
